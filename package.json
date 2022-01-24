@@ -1,0 +1,16 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwindcss": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}

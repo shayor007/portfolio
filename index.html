@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <style>
+
+        .poppins {
+            font-family: Poppins !important;
+        }
+
+        .bg_header{
+            background: url(./assets/Images/Face1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            /* background-position: center center; */
+            position: static;
+        }
+
+        .slide {
+            animation: slideLeft 1s forwards;
+            width:  50vw;
+        }
+
+        @keyframes slideLeft {
+            from {
+                width: 100vw;
+            }
+
+            to {
+                width: 50vw;
+            }
+        }
+
+        .work-items{
+            animation: fadeInTop 1s forwards;
+        }
+
+        @keyframes fadeInTop{
+            from{
+                opacity:0;
+                transform: translateY(-2em);
+            }
+
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        :hover{
+            transition: .5s ease-in-out;
+        }
+
+        .portfolio {
+            background: linear-gradient(transparent, transparent, black), url(./assets/Images/working.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat:no-repeat;
+            min-width: 200px;
+
+        }
+
+
+    </style>
+</head>
+
+<body class="poppins">
+    <div class="block lg:flex w-full">
+
+        <div class="w-full lg:w-1/2 lg:h-screen lg:relative lg:h-screen">
+
+            <div class="slide lg:fixed bg-black animate__lightSpeedInRight w-full lg:w-1/2 h-screen">
+                <div class="animate__animated  animate__bounceInRight animate__slower	0.1s"><img src="./assets/Images/logo-new-vector.png" class="py-24 mx-20"></div>
+                
+                <p class="text-5xl pt-16 mx-20 animate__animated animate__lightSpeedInRight text-white">Hello. I'm a freelance <br> frontend developer</p>
+    
+                <p class="text-white animate__animated animate__lightSpeedInRight text-base mx-20 pt-8">My name is Sayofunmi Ojomu. I craft user interfaces using <br> modern frontend web technologies</p>
+    
+                <div class="pt-20"></div>
+    
+                <div class="animate-bounce text-white text-lg text-center mx-20 py-4 rounded-full border-solid border-2 border-white w-48">Lets work together!</div>
+    
+                <div class="mx-20 animate__animated animate__lightSpeedInRight text-white pt-40">Find me at <a href="">Twitter</a>, <a href="">GitHub</a>  and <a href="">Linkedin.</a> </div>
+                <div class="mx-20 animate__animated animate__lightSpeedInRight text-white">Download resume</div>
+            </div>
+
+        </div>
+
+        
+        <div class="w-full lg:w-1/2">
+            <div class="bg_header h-screen w-full"></div>
+
+            <div class=" top-0">
+                <div class="font-medium text-4xl pt-24 mx-20">About me</div>
+                <div class="font-medium mx-20 my-6 pt-8 text-xl">I enjoy working closely with design teams to <br> faithfully translate their designs right down to the <br> pixel. Daily, you'll find me using modern frontend<br> technologies that bring the creative process to life <br>just as designers intended them to be.</div>
+
+                <div class="font-semibold pt-6 mx-20 text-3xl">Technical</div>
+                
+                <div class="font-medium mx-20 pt-2 text-sm">Right now you can find me hacking away primarily with Vue.js, Nuxt.js,<br> Gridsome, Prismic CMS, GraphQL and in general anything JavaScript, HTML<br> and CSS related. Also been known to dabble in React.js and Gatsby from time <br> time or wrestling with Webpack.</div>
+
+                <div class="font-medium text-3xl pt-6 mx-20 text-3xl">Personal</div>
+
+                <div class="font-medium text-sm mx-20 pt-2">I grew up in Nottingham and moved to London many years ago. Being half Italian and half<br> British, I try to visit family in Sicily whenever I can to practice<br> (struggling) with the basics of the language.</div>
+                <div class="pb-32"></div>
+            </div>
+
+           <div class="grid grid-cols-2 gap-1 text-white">
+               <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                    <div>
+                        <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">SomeOne</div>
+
+                        <div class="hidden group-hover:block work-items text-black">
+                            <h3 class="font-deminold text-lg my-2">Someone.</h3>
+                            <p class="font-medium bg-opacity-10 text-sm my-4">
+                                Greenfield projec using Nuxt.js with Prismic on Zeit Now</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                    <div class="px-10">
+                        <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">Ragged Edge</div>
+
+                        <div class="hidden group-hover:block work-items text-black">
+                            <h3 class="font-deminold text-lg my-2">Ragged Edge</h3>
+                            <p class="font-medium bg-opacity-10 text-sm my-4">
+                                A custom Wordpress build for big name and catering brands</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                    <div class="px-10">
+                        <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">The Hoxton</div>
+
+                        <div class="hidden group-hover:block work-items text-black">
+                            <h3 class="font-deminold text-lg my-2">The Hoxton</h3>
+                            <p class="font-medium bg-opacity-10 text-sm my-4">
+                                A production of the Working From_website with Nuxt,js and Wordpress</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                    <div class="px-10">
+                        <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">All of Us</div>
+
+                        <div class="hidden group-hover:block work-items text-black">
+                            <h3 class="font-deminold text-lg my-2">All of Us</h3>
+                            <p class="font-medium bg-opacity-10 text-sm my-4">
+                                Design system and component library for G.F Smith built with Vue.js and Storybook.</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                    <div class="px-10">
+                        <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">Foolproof</div>
+
+                        <div class="hidden group-hover:block work-items text-black">
+                            <h3 class="font-deminold text-lg my-2">Foolproof</h3>
+                            <p class="font-medium bg-opacity-10 text-sm my-4">
+                                Agency website using our own custom component library built with VDS</p>
+                        </div>
+                    </div>
+
+                </div>       
+                         
+                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                    <div class="px-10">
+                        <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">Parallel</div>
+
+                        <div class="hidden group-hover:block work-items text-black">
+                            <h3 class="font-deminold text-lg my-2">Parallel</h3>
+                            <p class="font-medium bg-opacity-10 text-sm my-4">
+                                Various web applications builds and maintenance for a range of clients</p>
+                        </div>
+                    </div>
+
+                </div>   
+            
+            </div>
+
+            <div class="py-64 mx-28">
+                <div class="font-semibold leading-normal text-3xl">We've worked with Micheal on several projects <br> and the work is of consistently high-quality. He <br> continues to be one of the most valued digital <br>  resources and we look forward to working <br> together more in future.</div>
+                <div class="pt-6"></div>
+
+                <div class="font-semibold text-xl">Matt Bland</div>
+                <div class="font-medium pt-2"></div>
+
+                <div class="text-sm">Managing Director of Dragged Edge </div>
+            </div>
+
+            <div class="bg-gray-200">
+                <div class="mx-20 text-3xl pt-24 ">Projects</div>
+                <div class="text-md mx-20 pt-2 pb-12">Swipe or drag below to see a small selection of projects I've worked on.</div>
+
+                <div class="grid grid-cols-3 gap-3">
+
+                    <div class="portfolio rounded-2xl py-52"></div>
+                    <div class="portfolio rounded-2xl py-52"></div>
+                    <div class="portfolio rounded-2xl py-52"></div>
+                    <div class="pb-28"></div>
+                </div>
+            </div>
+
+            <div class="mx-20">
+
+                <div class="py-8"></div>
+                <div class="text-4xl font-semi-bold">Contact Me</div>
+                <div class="py-4"></div>
+
+
+                <div class="text-2xl font-semi-bold">Don't be shy!</div>
+
+                <div class="text-sm pt-2 opacity-75 font-semi-bold">If you have a project in mind or would like to make an enquiry simply select one <br> of the following options.</div>
+
+                <div class="pt-16 flex items-center center">
+                    <div class="bg-green-300 p-2 rounded-full mr-4">
+                        <img src="./assets/Images/working.png" alt="" width="50px">
+                    </div>
+                    <div>I'd like to book you</div>
+                </div>
+
+                <div class="pt-6 flex items-center center">
+                    <div class="bg-yellow-300 p-2 rounded-full mr-4">
+                        <img src="./assets/Images/money.png" alt="" width="50px">
+                    </div>
+                    <div>I'd like a quote for a project</div>
+                </div>
+
+                <div class="pt-6 flex items-center center">
+                    <div class="bg-yellow-300 p-2 rounded-full mr-4">
+                        <img src="./assets/Images/wave.png" alt="" width="50px">
+                    </div>
+                    <div>I'd just like to say hello</div>
+                </div>
+
+                <div class="py-40"></div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
