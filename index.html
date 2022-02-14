@@ -11,10 +11,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css"/>
     <link rel="stylesheet" href="assets/css/animate.min.css">
+    
+    
     <style>
 
         .body {
             font-family: Poppins !important;
+        }
+
+        .cursor{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            transform: translate3d(-50%, -50%, 0);
+            top: 0;
+            left: 0;
+            background-color: #8EE4AF;
+        }
+
+        .lazy-cursor{
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            position: absolute;
+            transform: translate3d(-50%, -50%, 0);
+            top: 0;
+            left: 0;
+            transition: 0.1s ease-out;
         }
 
         .bg_header{
@@ -22,8 +45,9 @@
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
-            /* background-position: center center; */
+            background-position: center center;
             position: static;
+            filter: #FFA3B5(100%);
         }
 
         .slide {
@@ -80,6 +104,24 @@
         @media screen and (min-width: 1000px) {}
 
     </style>
+
+<script>
+    "use strict"
+    (function (){
+        var cursor = document.querySelector('.cursor');
+        var cursorLazy = document.querySelector('.cursor-lazy');
+        var links = document.querySelector('a');
+
+        var editCursor = function editCursor(event) {
+            cursor.style.left = event.clientX + 'px';
+            cursor.style.top = event.clientY + 'px';
+            cursorLazy.style.left = event.clientX + 'px';
+            cursorLazy.style.top = event.clientY + 'px';
+        };
+
+        window.addEventListener('movemouse', editCursor);
+    })();
+</script>
 </head>
 
 <body class="poppins">
@@ -87,19 +129,19 @@
 
         <div class="w-full lg:w-1/2 lg:h-screen lg:relative lg:h-screen">
 
-            <div class="slide lg:fixed bg-black animate__lightSpeedInRight w-full h-screen ">
+            <div class="lg:slide lg:fixed bg-black animate__lightSpeedInRight w-full h-screen ">
                 <div class="animate__animated  animate__bounceInRight animate__slower	0.1s"><img src="./assets/Images/logo-new-vector.png" class="py-24 mx-20"></div>
                 
-                <p class="text-5xl pt-16 mx-20 animate__animated animate__lightSpeedInRight text-white">Hello. I'm a freelance <br> frontend developer</p>
+                <p class="text-5xl pt-16 mx-20 animate__animated animate__lightSpeedInRight text-mycolor2">Hello. I'm a freelance <br> frontend developer</p>
     
-                <p class="text-white animate__animated animate__lightSpeedInRight text-base mx-20 pt-8">My name is Sayofunmi Ojomu. I craft user interfaces using <br> modern frontend web technologies</p>
+                <p class="text-mycolor2 animate__animated animate__lightSpeedInRight text-base mx-20 pt-8">My name is Sayofunmi Ojomu. I craft user interfaces using <br> modern frontend web technologies</p>
     
                 <div class="pt-20"></div>
     
-                <div class="animate-bounce text-white text-lg text-center mx-20 py-4 rounded-full border-solid border-2 border-white w-48">Lets work together!</div>
+                <div class="animate-bounce text-mycolor2 text-lg text-center mx-20 py-4 rounded-full border-solid border-2 border-mycolor2 w-48">Lets work together!</div>
     
-                <div class="mx-20 animate__animated animate__lightSpeedInRight text-white pt-40">Find me at <a href="">Twitter</a>, <a href="">GitHub</a>  and <a href="">Linkedin.</a> </div>
-                <div class="mx-20 animate__animated animate__lightSpeedInRight text-white">Download resume</div>
+                <div class="mx-20 animate__animated animate__lightSpeedInRight text-white pt-40">Find me at <a href="" class="text-sm underline text-mycolor2">Twitter</a>, <a href="" class="text-sm underline text-mycolor2">GitHub</a>  and <a href="" class="text-sm underline text-mycolor2">Linkedin.</a> </div>
+                <div class="font-normal mx-20 animate__animated animate__lightSpeedInRight text-white">Download <a href="" class="text-sm underline text-mycolor2">my resume</a></div>
             </div>
 
         </div>
@@ -209,48 +251,48 @@
 
 
 
-            <div class="sticky bg-white py-64 px-28">
-                <div class="font-semibold leading-normal text-3xl">We've worked with Micheal on several projects <br> and the work is of consistently high-quality. He <br> continues to be one of the most valued digital <br>  resources and we look forward to working <br> together more in future.</div>
+            <div class="sticky bg-black px-20 py-64 md:px-28">
+                <div class="font-semibold leading-normal text-lg md:text-3xl max-w-md md:max-w-2xl text-mycolor2">We've worked with Micheal on several projects and the work is of consistently high-quality. He continues to be one of the most valued digital resources and we look forward to working together more in future.</div>
                 <div class="pt-6"></div>
 
-                <div class="font-semibold text-xl">Matt Bland</div>
+                <div class="font-semibold text-xl text-mycolor2">Matt Bland</div>
                 <div class="font-medium pt-2"></div>
 
-                <div class="text-sm">Managing Director of Dragged Edge </div>
+                <div class="text-sm text-mycolor2">Managing Director of Dragged Edge </div>
             </div>
 
 
 
 
 
-            <div class="sticky pb-28 bg-gray-200">
-                <div class="mx-20 text-3xl pt-24 ">Projects</div>
-                <div class="text-md mx-20 pt-2 pb-12">Swipe or drag below to see a small selection of projects I've worked on.</div>
+            <div class="sticky  pb-32 bg-gray-200">
+                <div class="mx-20 text-3xl font-bold pt-24 ">Web Projects</div>
+                <div class="text-md mx-20 pt-2 pb-12 font-semibold">Scroll or drag below to see a small selection of projects I've worked on.</div>
 
-                <div class="gap-3 flex flex-nowrap overflow-x-scroll">
-                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
-                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
-                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
-                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
-                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
-                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
-                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
-                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
-                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                <div class="gap-3 flex flex-nowrap overflow-x-hidden  slider">
+                    <div class="px-6 w-128 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="px-6 w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="px-6 w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="px-6 w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="px-6 w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="px-6 w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="px-6 w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="px-6 w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="px-6 w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
                 </div>
 
                 <div class=""></div>
                 
             </div> 
 
-            <div class="sticky h-screen bg-white px-20">
+            <div class="sticky h-screen bg-mycolor3 px-20">
 
                 <div class="py-8"></div>
-                <div class="text-4xl font-semi-bold">Contact Me</div>
+                <div class="text-4xl font-bold">Contact Me</div>
                 <div class="py-4"></div>
 
 
-                <div class="text-2xl font-semi-bold">Don't be shy!</div>
+                <div class="text-2xl font-semibold">Don't be shy!</div>
 
                 <div class="text-sm pt-2 opacity-75 font-semi-bold">If you have a project in mind or would like to make an enquiry simply select one <br> of the following options.</div>
 
@@ -258,21 +300,21 @@
                     <div class="bg-green-300 p-2 rounded-full mr-4">
                         <img src="./assets/Images/working.png" alt="" width="50px">
                     </div>
-                    <div>I'd like to book you</div>
+                    <div class="font-medium">I'd like to book you</div>
                 </div>
 
                 <div class="pt-6 flex items-center center">
                     <div class="bg-yellow-300 p-2 rounded-full mr-4">
                         <img src="./assets/Images/money.png" alt="" width="50px">
                     </div>
-                    <div>I'd like a quote for a project</div>
+                    <div class="font-medium">I'd like a quote for a project</div>
                 </div>
 
                 <div class="pt-6 flex items-center center">
                     <div class="bg-yellow-300 p-2 rounded-full mr-4">
                         <img src="./assets/Images/wave.png" alt="" width="50px">
                     </div>
-                    <div>I'd just like to say hello</div>
+                    <div class="font-medium">I'd just like to say hello</div>
                 </div>
 
                 <div class="py-40"></div>
@@ -280,5 +322,33 @@
         </div>
         
     </div>
+
+
+    <!-- slick slider CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <!-- jquery script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+    
+    <!-- script slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script type="text/javascript">
+    
+    $(".slider").slick({
+        centerMode: true,
+        slidesToShow: 2,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+    });
+
+    </script>
+
+    
 </body>
 </html>
