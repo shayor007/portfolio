@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <style>
 
-        .poppins {
+        .body {
             font-family: Poppins !important;
         }
 
         .bg_header{
-            background: url(./assets/Images/Face1.jpg);
+            background: url(./assets/Images/007.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
@@ -27,7 +27,7 @@
         }
 
         .slide {
-            animation: slideLeft 1s forwards;
+            animation: slideLeft 5s forwards;
             width:  50vw;
         }
 
@@ -66,10 +66,18 @@
             background-size: cover;
             background-position: center center;
             background-repeat:no-repeat;
-            min-width: 200px;
+            width: 200px;
 
         }
 
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        @media screen and (min-width: 1000px) {}
 
     </style>
 </head>
@@ -79,7 +87,7 @@
 
         <div class="w-full lg:w-1/2 lg:h-screen lg:relative lg:h-screen">
 
-            <div class="slide lg:fixed bg-black animate__lightSpeedInRight w-full lg:w-1/2 h-screen">
+            <div class="slide lg:fixed bg-black animate__lightSpeedInRight w-full h-screen ">
                 <div class="animate__animated  animate__bounceInRight animate__slower	0.1s"><img src="./assets/Images/logo-new-vector.png" class="py-24 mx-20"></div>
                 
                 <p class="text-5xl pt-16 mx-20 animate__animated animate__lightSpeedInRight text-white">Hello. I'm a freelance <br> frontend developer</p>
@@ -98,9 +106,9 @@
 
         
         <div class="w-full lg:w-1/2">
-            <div class="bg_header h-screen w-full"></div>
+            <div class="sticky bg_header h-screen w-full"></div>
 
-            <div class=" top-0">
+            <div class="sticky bg-white">
                 <div class="font-medium text-4xl pt-24 mx-20">About me</div>
                 <div class="font-medium mx-20 my-6 pt-8 text-xl">I enjoy working closely with design teams to <br> faithfully translate their designs right down to the <br> pixel. Daily, you'll find me using modern frontend<br> technologies that bring the creative process to life <br>just as designers intended them to be.</div>
 
@@ -114,22 +122,22 @@
                 <div class="pb-32"></div>
             </div>
 
-           <div class="grid grid-cols-2 gap-1 text-white">
-               <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+            <div class="sticky grid grid-cols-2 gap-1 bg-white">
+                <div class="h-full bg-gray-200 flex items-center justify-center group hover:bg-white">
                     <div>
                         <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">SomeOne</div>
 
                         <div class="hidden group-hover:block work-items text-black">
                             <h3 class="font-deminold text-lg my-2">Someone.</h3>
                             <p class="font-medium bg-opacity-10 text-sm my-4">
-                                Greenfield projec using Nuxt.js with Prismic on Zeit Now</p>
+                                Greenfield project using Nuxt.js with Prismic on Zeit Now</p>
                         </div>
                     </div>
 
                 </div>
 
 
-                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                <div class="h-64 bg-gray-200 flex items-center justify-center group hover:bg-white">
                     <div class="px-10">
                         <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">Ragged Edge</div>
 
@@ -143,7 +151,7 @@
                 </div>
 
 
-                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                <div class="h-64 bg-gray-200 flex items-center justify-center group hover:bg-white">
                     <div class="px-10">
                         <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">The Hoxton</div>
 
@@ -156,7 +164,7 @@
 
                 </div>
 
-                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                <div class="h-64 bg-gray-200 flex items-center justify-center group hover:bg-white">
                     <div class="px-10">
                         <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">All of Us</div>
 
@@ -169,7 +177,7 @@
 
                 </div>
                 
-                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                <div class="h-64 bg-gray-200 flex items-center justify-center group hover:bg-white">
                     <div class="px-10">
                         <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">Foolproof</div>
 
@@ -181,8 +189,8 @@
                     </div>
 
                 </div>       
-                         
-                <div class=" bg-gray-200 flex items-center justify-center group hover:bg-white">
+                        
+                <div class="h-64 bg-gray-200 flex items-center justify-center group hover:bg-white">
                     <div class="px-10">
                         <div class="font-serif group-hover:hidden font-semi-bold italic text-4xl mx-20 text-center px-6 py-24 text-black">Parallel</div>
 
@@ -197,7 +205,11 @@
             
             </div>
 
-            <div class="py-64 mx-28">
+            
+
+
+
+            <div class="sticky bg-white py-64 px-28">
                 <div class="font-semibold leading-normal text-3xl">We've worked with Micheal on several projects <br> and the work is of consistently high-quality. He <br> continues to be one of the most valued digital <br>  resources and we look forward to working <br> together more in future.</div>
                 <div class="pt-6"></div>
 
@@ -207,20 +219,31 @@
                 <div class="text-sm">Managing Director of Dragged Edge </div>
             </div>
 
-            <div class="bg-gray-200">
+
+
+
+
+            <div class="sticky pb-28 bg-gray-200">
                 <div class="mx-20 text-3xl pt-24 ">Projects</div>
                 <div class="text-md mx-20 pt-2 pb-12">Swipe or drag below to see a small selection of projects I've worked on.</div>
 
-                <div class="grid grid-cols-3 gap-3">
-
-                    <div class="portfolio rounded-2xl py-52"></div>
-                    <div class="portfolio rounded-2xl py-52"></div>
-                    <div class="portfolio rounded-2xl py-52"></div>
-                    <div class="pb-28"></div>
+                <div class="gap-3 flex flex-nowrap overflow-x-scroll">
+                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
+                    <div class="w-96 h-72"><img src="./assets/Images/007.jpg" class="h-full w-full rounded-2xl" alt=""></div>
                 </div>
-            </div>
 
-            <div class="mx-20">
+                <div class=""></div>
+                
+            </div> 
+
+            <div class="sticky h-screen bg-white px-20">
 
                 <div class="py-8"></div>
                 <div class="text-4xl font-semi-bold">Contact Me</div>
