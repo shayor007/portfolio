@@ -549,6 +549,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 28rem;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -898,6 +914,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     max-width: 42rem;
   }
 
+  .md\:max-w-xl {
+    max-width: 36rem;
+  }
+
+  .md\:max-w-lg {
+    max-width: 32rem;
+  }
+
   .md\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
@@ -906,6 +930,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }
 
@@ -928,6 +957,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:max-w-2xl {
+    max-width: 42rem;
+  }
+
+  .lg\:max-w-xl {
+    max-width: 36rem;
   }
 
   .lg\:py-24 {
