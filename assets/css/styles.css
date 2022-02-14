@@ -717,6 +717,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 10rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pt-16 {
   padding-top: 4rem;
 }
@@ -918,5 +928,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
